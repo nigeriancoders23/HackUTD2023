@@ -1,0 +1,17 @@
+/* Add this to your CSS file or style tag in your React component */
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin to separate the slider and input */
+  }
+  
+  .slider {
+    width: 80%; /* Set the width of the slider */
+  }
+  
+  .value-input {
+    width: 5%; /* Set the width of the input box */
+    margin-left: 10px; /* Add margin to the left to separate from the slider */
+  }
+  
