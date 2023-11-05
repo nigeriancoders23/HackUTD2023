@@ -3,8 +3,10 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Slider from '@mui/material/Slider';
+import Slider, { SliderThumb } from '@mui/material/Slider';
 import MuiInput from '@mui/material/Input';
+import PropTypes from 'prop-types';
+import Tooltip from '@mui/material/Tooltip';
 
 const Input = styled(MuiInput)`
   width: 42px;
@@ -32,7 +34,7 @@ export default function InputSlider() {
   return (
     <Box sx={{ width: 250 }}>
       <Typography id="input-slider" gutterBottom>
-        Credit Score
+         Home Appraised Value
       </Typography>
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
@@ -41,6 +43,7 @@ export default function InputSlider() {
             onChange={handleSliderChange}
             max={800}
             aria-labelledby="input-slider"
+            color="secondary"
           />
         </Grid>
         <Grid item>
@@ -61,4 +64,6 @@ export default function InputSlider() {
       </Grid>
     </Box>
   );
+  
 }
+
