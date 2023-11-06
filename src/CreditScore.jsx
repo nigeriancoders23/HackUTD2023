@@ -9,11 +9,11 @@ import PropTypes from 'prop-types';
 import Tooltip from '@mui/material/Tooltip';
 
 const Input = styled(MuiInput)`
-  width: 42px;
+  width: 100px;
 `;
 
 export default function InputSlider() {
-  const [value, setValue] = React.useState(30);
+  const [value, setValue] = React.useState(400);
 
   const handleSliderChange = (event, newValue) => {
     setValue(newValue);
@@ -53,7 +53,7 @@ export default function InputSlider() {
             onChange={handleInputChange}
             onBlur={handleBlur}
             inputProps={{
-              step: 2,
+              step: 1,
               min: 0,
               max: 800,
               type: 'number',

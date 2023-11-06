@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import Tooltip from '@mui/material/Tooltip';
 
 const Input = styled(MuiInput)`
-  width: 42px;
+  width: 100px;
 `;
 
 export default function InputSlider() {

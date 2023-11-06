@@ -13,7 +13,7 @@ const Input = styled(MuiInput)`
 `;
 
 export default function InputSlider() {
-  const [value, setValue] = React.useState(30);
+  const [value, setValue] = React.useState(500000);
 
   const handleSliderChange = (event, newValue) => {
     setValue(newValue);
@@ -26,21 +26,22 @@ export default function InputSlider() {
   const handleBlur = () => {
     if (value < 0) {
       setValue(0);
-    } else if (value > 800) {
-      setValue(800);
+    } else if (value > 1000000) {
+      setValue(1000000);
     }
   };
 
   return (
     <Box sx={{ width: 250 }}>
       <Typography id="input-slider" gutterBottom>
-Monthly Credit Card Payment      </Typography>
+        Total Loans
+      </Typography>
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
           <Slider
             value={typeof value === 'number' ? value : 0}
             onChange={handleSliderChange}
-            max={800}
+            max={1000000}
             aria-labelledby="input-slider"
             color="secondary"
           />
@@ -52,9 +53,9 @@ Monthly Credit Card Payment      </Typography>
             onChange={handleInputChange}
             onBlur={handleBlur}
             inputProps={{
-              step: 2,
+              step: .01,
               min: 0,
-              max: 800,
+              max: 1000000,
               type: 'number',
               'aria-labelledby': 'input-slider',
             }}

@@ -8,6 +8,8 @@ import DownPaymentAmount from './DownPaymentAmount.jsx'
 import MonthlyCreditCardPayment from './MonthlyCreditCardPayment.jsx'
 import HomeAppraisedValue from './HomeAppraisedValue.jsx'
 import EstMonthlyMortgagePayment from './EstMonthlyMortagePayment.jsx'
+import LoanAmount from './LoanAmount.jsx'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <CreditScore />
@@ -15,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <MonthlyCarPayments/>
     <StudentLoanPayments/>
     <DownPaymentAmount/>
+    <LoanAmount/> 
     <MonthlyCreditCardPayment/>
     <HomeAppraisedValue/>
     <EstMonthlyMortgagePayment/>
